@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="container">
+    <div class="menu-area">
+        <div class="title"><h1>Lixo's Library</h1></div>
+        <img id="popup-button" title="Add Book" class="show-form" src="assets/icons/plus-circle-outline-custom.png" alt="Add book">
+        <img id="load-test-data-button" title="Load Test Data"  src="assets/icons/test-data.png" alt="Test Data">
+        <img id="github-logo" src="assets/icons/github-mark.png" alt="Add book">
+    </div>
+    <div class="book-area">
+    </div>
+</div>
+
+<dialog id="myDialog">
+    <form id="my-form">
+        <h1 id="dialog-head">Add Book</h1>
+        <img id="close-dialog" src="assets/icons/close-circle-outline.svg" alt="close dialog" style="width:48px;
+        position: absolute; top:0; right:0; background-color: white; border-radius: 44px;">
+        <label for="book-title">Book Title</label>
+        <input type="text" id="book-title"  placeholder="The Stand"  required>
+
+        <label for="book-author">Author</label>
+        <input type="text" id="book-author" placeholder="Stephen King" required>
+
+        <label for="book-total-pages">Total pages</label>
+        <input type="number" id="book-total-pages" placeholder="1,153">
+
+        <label for="book-cover">Cover</label>
+        <input type="text" id="book-cover" placeholder="url goes here">
+
+        <span>Have you Read this book?</span>
+        <div>
+            <input type="radio" id="yes-indicator" value="y"  name="read-ind">
+            <label for="yes-indicator">Yes</label>
+
+            <input type="radio" id="no-indicator" value="n"  name="read-ind" checked>
+            <label for="no-indicator">Not yet</label>
+        </div>
+
+        <button id="add-dialog-btn" value="default">Add</button>
+        <button id="clear-dialog-btn">Clear</button>
+    </form>
+</dialog>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+/node_modules/
+/Topics/
+*.yaml
+*.idea
+*.py
+requirements.txt
+*odin.code-workspace

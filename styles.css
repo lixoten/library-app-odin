@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
+:root {
+    --invalid-color: red;
+    --valid-color: green;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Goudy Bookletter 1911",monospace;
+
+}
+#container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+}
+
+/* Begin Header Menu CSS */
+.menu-area {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    background-color: cornsilk;
+    border-radius: 8px;
+    padding: 16px;
+}
+.menu-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-area img {
+    width: 80px;
+    height: 80px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(90deg); }
+}
+.menu-area img:hover {
+    animation: spin 0.5s linear 1;
+}
+
+/* End Header Menu CSS */
+
+
+/* Begin Book Form Dialog CSS*/
+#myDialog {
+    border-radius: 22px;
+}
+
+form {
+    max-width: 300px;
+    display: grid;
+    grid-template-columns: max-content minmax(100px, 1fr) 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 8px;
+    justify-content: center;
+
+    border-radius: 16px;
+    background-color: cornsilk;
+    padding: 16px;
+}
+form h1 {
+    text-decoration: underline;
+    margin: 0 auto;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+label {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-self: end;
+}
+
+input {
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+input[type="text"]:valid,
+input[type="number"]:valid{
+    outline-color: var(--valid-color);
+}
+
+input[type="text"]:invalid,
+input[type="number"]:invalid{
+    outline-color: var(--invalid-color);
+}
+
+
+form > span {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+input[type=checkbox] {
+    justify-self: start;
+}
+
+input::placeholder {
+    opacity: 0.4;
+}
+
+form > div {
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    /* This blurs the area over all*/
+    filter: blur(25px);
+    /* This one actually blurs the text content*/
+    /*backdrop-filter: blur(12px);*/
+
+}
+/* End Book Form Dialog CSS*/
+
+
+/* Begin Book Card CSS */
+.book-area {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+    justify-content: center;
+}
+
+.book p {
+    margin: 0;
+    padding: 0;
+}
+.book h2 {
+    margin: 0;
+    padding: 0;
+}
+.book {
+    display: grid;
+    grid-template-columns: 150px 200px;
+    grid-template-rows: auto auto auto auto auto auto;
+
+    background: linear-gradient(to left, #c4c4a9, #e7c181);
+    border-radius: 8px;
+
+    min-width: 350px;
+    max-width: 400px;
+
+    padding: 8px;
+    box-shadow: 1px 5px 5px 1px orange;
+}
+.book > img {
+    background-color: cornflowerblue;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 6;
+    align-self: center;
+}
+
+.book > h2 {
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.book > p {
+    grid-column-start: 2;
+    grid-column-end: -1;
+}
+.book > div {
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.cover {
+    width: 100px;
+    /*max-height: 135px;*/
+    height: 135px;
+    object-fit: cover; /* or use 'contain' depending on your needs */
+}
+
+.book:hover {
+    transform: scale(1.04);
+}
+
+.delete-book:hover,
+.edit-book:hover,
+    /*.read-status:active,*/
+.status:hover {
+    transform: scale(1.14);
+}
+
+.read {
+    color: green;
+    filter: brightness(0) saturate(100%) invert(19%) sepia(100%) saturate(4506%) hue-rotate(106deg) brightness(100%) contrast(108%);
+}
+.unread {
+    color: red;
+    filter: brightness(0) saturate(100%) invert(17%) sepia(100%) saturate(7323%) hue-rotate(10deg) brightness(98%) contrast(125%);
+}
+.book-action-area {
+    display: flex;
+    justify-content: space-between;
+}
+/* End Book Card CSS */
