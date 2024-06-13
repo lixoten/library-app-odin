@@ -134,15 +134,15 @@ function loadTestData(){
     const tempLibrary = [];
     let i = 0;
     tempLibrary[i++] = new Book("It", "Stephen King", 1138, true, "https://m.media-amazon.com/images/I/71-Hcgk9ErL._SL1200_.jpg");
-    tempLibrary[i++] = new Book("The Shining", "Stephen King", 659, true, "/assets/covers/theshining.jpg");
-    tempLibrary[i++] = new Book("Dracula", "Bram Stoker", 418, false, "/assets/covers/dracula.jpg");
-    tempLibrary[i++] = new Book("Frankenstein", "Mary Shelley", 280, false, "/assets/covers/frankenstein.jpg");
-    tempLibrary[i++] = new Book("The Amityville Horror", "Jay Anson", 256, false, "/assets/covers/amityville.jpg");
-    tempLibrary[i++] = new Book("The Haunting of Hill House", "Shirley Jackson", 246, false, "/assets/covers/haunting.jpg");
-    tempLibrary[i++] = new Book("Psycho", "Robert Bloch", 176, false, "/assets/covers/psycho.jpg");
-    tempLibrary[i++] = new Book("The Exorcist", "William Peter Blatty", 400, false, "/assets/covers/exorcist.jpg");
-    tempLibrary[i++] = new Book("Rosemary's Baby", "Ira Levin", 245, false, "/assets/covers/rosemary.jpg");
-    tempLibrary[i++] = new Book("The Silence of the Lambs", "Thomas Harris", 338,false, "/assets/covers/silenceoflambs.jpg");
+    tempLibrary[i++] = new Book("The Shining", "Stephen King", 659, true, "./assets/covers/theshining.jpg");
+    tempLibrary[i++] = new Book("Dracula", "Bram Stoker", 418, false, "./assets/covers/dracula.jpg");
+    tempLibrary[i++] = new Book("Frankenstein", "Mary Shelley", 280, false, "./assets/covers/frankenstein.jpg");
+    tempLibrary[i++] = new Book("The Amityville Horror", "Jay Anson", 256, false, "./assets/covers/amityville.jpg");
+    tempLibrary[i++] = new Book("The Haunting of Hill House", "Shirley Jackson", 246, false, "./assets/covers/haunting.jpg");
+    tempLibrary[i++] = new Book("Psycho", "Robert Bloch", 176, false, "./assets/covers/psycho.jpg");
+    tempLibrary[i++] = new Book("The Exorcist", "William Peter Blatty", 400, false, "./assets/covers/exorcist.jpg");
+    tempLibrary[i++] = new Book("Rosemary's Baby", "Ira Levin", 245, false, "./assets/covers/rosemary.jpg");
+    tempLibrary[i++] = new Book("The Silence of the Lambs", "Thomas Harris", 338,false, "./assets/covers/silenceoflambs.jpg");
     for (const book of tempLibrary) {
         myLibrary.push(book)
         displayBook(book);
@@ -160,14 +160,14 @@ function displayBook(book) {
     const bookCoverElement = document.createElement("img")
     bookCoverElement.className = "cover"
     if (book.cover === "") {
-        bookCoverElement.setAttribute("src", '/assets/icons/book-cover.png')
+        bookCoverElement.setAttribute("src", './assets/icons/book-cover.png')
     } else {
         bookCoverElement.setAttribute("src", book.cover)
     }
     bookCoverElement.onerror = function() {
         //console.warn('Failed to load book cover image. Falling back to default image.');
         this.onerror = null;
-        this.src = '/assets/icons/book-cover.png';
+        this.src = './assets/icons/book-cover.png';
     }
     bookElement.appendChild(bookCoverElement)
 

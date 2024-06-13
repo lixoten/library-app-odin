@@ -1,7 +1,12 @@
 # Project: Library (Frontend) - The Odin Project
 <hr />
 
-<img src="./screenshot.png" alt="screenshot2" width="65%"/>  
+<p style="text-align: center;">
+  <img src="./screenshot.png" alt="screenshot2" width="65%"/>  
+</p>
+<h2 style="text-align: center;">
+<a href="https://lixoten.github.io/library-app-odin/">DEMO</a>
+</h2>
 
 
 ## Project Overview
