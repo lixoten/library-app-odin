@@ -17,13 +17,15 @@ elements.closeDialogButton.addEventListener("click", handleCloseDialog);
 elements.clearDialogButton.addEventListener("click", handleClearDialog);
 elements.loadTestDataButton.addEventListener("click", handleLoadTestData);
 
-function Book(title, author, pages, read, cover) {
-    this.id = idCounter++;
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.cover = cover;
+class Book {
+    constructor(title, author, pages, read, cover) {
+        this.id = idCounter++;
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.cover = cover;
+    }
 }
 
 function displayBookCard(book) {
@@ -272,4 +274,4 @@ function loadTestData() {
         displayBookCard(book);
     }
 }
-//281 275
+//281 275 277
