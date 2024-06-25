@@ -49,7 +49,7 @@ body {
 
 
 /* Begin Book Form Dialog CSS*/
-#myDialog {
+#book-dialog {
     border-radius: 22px;
 }
 
@@ -221,4 +221,44 @@ dialog::backdrop {
     display: flex;
     justify-content: space-between;
 }
+
+
+.sw-box {
+    border: 2px solid red;
+    border-radius: 16px;
+    /*gap:5px;*/
+    width: 75px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    color: red;
+    flex-direction: row;
+}
+
+.circle {
+    background-color: red;
+    border-radius: 16px;
+    width: 16px;
+    height: 16px;
+}
+.read-circle {
+    background-color: green;
+}
+.readx {
+    border-color: green;
+    color: green;
+    flex-direction: row-reverse;
+}
+/*.unreadx {*/
+/*    border-color: red;*/
+/*    color: red;*/
+/*    flex-direction: row;*/
+/*}*/
+
+.sw-span {
+    padding: 0 5px;
+}
+
 /* End Book Card CSS */
